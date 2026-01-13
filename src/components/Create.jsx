@@ -2,8 +2,11 @@ import { useState } from "react";
 import InputContainer from "../Elements/Input/InputContainer";
 import { PrimaryButton, SecondaryButton } from "../Elements/Button/Button";
 import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
 
-function Create({ setAction, setData }) {
+function Create() {
+  const navigate = useNavigate();
+
   const [values, setValues] = useState({
     name: "",
     username: "",
@@ -19,9 +22,7 @@ function Create({ setAction, setData }) {
       .post("http://localhost:5000/users", values)
       .then((res) => {
         console.log(res.data);
-        setData((prev) => [...prev, res.data]);
-        setAction(false);
-        // navigate("/");
+        navigate("/");
       })
       .catch((error) => {
         console.log("Error:", error);
@@ -81,9 +82,9 @@ function Create({ setAction, setData }) {
           </div>
           <div className="flex gap-2 mt-5">
             <PrimaryButton type="submit">Submit</PrimaryButton>
-            <SecondaryButton onClick={() => setAction(null)}>
-              Back
-            </SecondaryButton>
+            <Link to="/">
+              <SecondaryButton>Back</SecondaryButton>
+            </Link>
           </div>
         </form>
       </div>

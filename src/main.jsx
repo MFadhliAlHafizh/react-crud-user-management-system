@@ -3,12 +3,27 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from './components/Home.jsx';
+import Create from './components/Create.jsx';
+import Update from './components/Update.jsx';
+import Detail from './components/Detail.jsx';
 import { NotFoundPage } from './components/NotFoundPage.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "/create",
+    element: <Create></Create>,
+  },
+  {
+    path: "/update/:id",
+    element: <Update />,
+  },
+  {
+    path: "/detail/:id",
+    element: <Detail />,
   },
   {
     path:"*",

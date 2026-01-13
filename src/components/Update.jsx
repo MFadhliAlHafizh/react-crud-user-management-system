@@ -2,8 +2,12 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import InputContainer from "../Elements/Input/InputContainer";
 import { PrimaryButton, SecondaryButton } from "../Elements/Button/Button";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
-function Update({ setAction, user, setData }) {
+function Update() {
+  const { id } = useParams();
+  const navigate = useNavigate();
+
   const [values, setValues] = useState({
     name: "",
     username: "",
@@ -13,28 +17,25 @@ function Update({ setAction, user, setData }) {
   });
 
   useEffect(() => {
-    if (user) {
-      setValues({
-        name: user.name,
-        username: user.username,
-        email: user.email,
-        phone: user.phone,
-        website: user.website,
+    axios
+      .get(`http://localhost:5000/users/${id}`)
+      .then((res) => {
+        // console.log(res);
+        setValues(res.data);
+      })
+      .catch((error) => {
+        console.log("Error:", error);
       });
-    }
-  }, [user]);
+  }, [id]);
 
   const handleUpdate = (e) => {
     e.preventDefault();
 
     axios
-      .put(`http://localhost:5000/users/${user.id}`, values)
+      .put(`http://localhost:5000/users/${id}`, values)
       .then((res) => {
         console.log(res.data);
-        setData((prev) =>
-          prev.map((item) => (item.id === user.id ? res.data : item))
-        );
-        setAction(null);
+        navigate("/");
       })
       .catch((error) => {
         console.log("Error:", error);
@@ -99,9 +100,9 @@ function Update({ setAction, user, setData }) {
           </div>
           <div className="flex gap-2 mt-5">
             <PrimaryButton type="submit">Update</PrimaryButton>
-            <SecondaryButton onClick={() => setAction(null)}>
-              Back
-            </SecondaryButton>
+            <Link to="/">
+              <SecondaryButton>Back</SecondaryButton>
+            </Link>
           </div>
         </form>
       </div>
