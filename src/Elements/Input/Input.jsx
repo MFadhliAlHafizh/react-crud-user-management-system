@@ -8,7 +8,7 @@ function Input({ type, name, placeholder, value, className, onChange = () => {} 
       onChange={onChange}
       value={value}
       required
-      className={`border border-primaryColor focus:ring outline-none rounded w-full py-2 px-3 text-sm text-slate-700 ${className}`}
+      className={`bg-white border border-primaryColor focus:ring outline-none rounded w-full py-2 px-3 text-sm text-slate-700 ${className}`}
     />
   );
 }

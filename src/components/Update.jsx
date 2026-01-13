@@ -49,8 +49,7 @@ function Update({ setAction, user, setData }) {
         </h1>
         <div className="h-2 w-24 rounded-full bg-primaryColor mb-4"></div>
         <p className="text-sm text-slate-500 max-w-lg mb-4 leading-normal tracking-wider">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt,
-          nisi. Eligendi quas et iure ipsam cumque sunt.
+          Ensure that data changes are made carefully before saving so that the information remains accurate and up to date.
         </p>
         <form onSubmit={handleUpdate}>
           <div className="max-w-full p-4 bg-white rounded-md shadow-[0_3px_10px_rgb(0,0,0,0.2)]">

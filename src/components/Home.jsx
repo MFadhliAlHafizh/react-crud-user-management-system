@@ -47,7 +47,7 @@ function Home() {
   );
 
   return (
-    <div className="flex justify-center items-center p-4 sm:p-7 relative">
+    <div className="flex justify-center items-center p-4 sm:p-7 relative bg-gray-50">
       {action && (
         <div className="absolute w-full h-full flex justify-center pt-8 bg-[#00000080]">
           <div className="bg-white w-4xl rounded-md h-fit relative">
@@ -85,8 +85,7 @@ function Home() {
         </h1>
         <div className="h-2 w-24 rounded-full bg-primaryColor mb-4"></div>
         <p className="text-sm text-slate-500 max-w-lg mb-4 leading-normal tracking-wider">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt,
-          nisi. Eligendi quas et iure ipsam cumque sunt.
+          A list of all registered users used to manage user data stored in the system.
         </p>
         <div className="w-full">
           <div className="flex justify-between gap-3 mb-3">
