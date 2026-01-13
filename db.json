@@ -41,12 +41,12 @@
       "website": "rizkypratama.id"
     },
     {
-      "id": "6",
       "name": "Ahmad Fauzi",
       "username": "ahmadfauzi",
       "email": "ahmad.fauzi@example.com",
       "phone": "085233344455",
-      "website": "ahmadfauzi.com"
+      "website": "ahmadfauzi.com",
+      "id": "6"
     },
     {
       "id": "7",
@@ -71,6 +71,22 @@
       "email": "mega.anjani@example.com",
       "phone": "085611122233",
       "website": "megaanjani.co.id"
+    },
+    {
+      "id": "a963",
+      "name": "Cloud",
+      "username": "Cloud100",
+      "email": "cloud@gmail.com",
+      "phone": "08123456",
+      "website": "https://cloud.com"
+    },
+    {
+      "id": "53cf",
+      "name": "River",
+      "username": "River99",
+      "email": "river@gmail.com",
+      "phone": "0812",
+      "website": "https://river.com"
     }
   ]
 }

@@ -1,10 +1,11 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primaryColor: #005F5A;
+  --color-secondaryColor: #0F3443;
+}
+
 @layer base {
-    /* tbody tr:nth-child(odd) {
-        @apply bg-gray-200
-    } */
-    
   body {
     font-family: "Poppins", sans-serif;
   }
