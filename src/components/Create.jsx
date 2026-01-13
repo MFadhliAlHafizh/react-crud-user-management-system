@@ -30,15 +30,14 @@ function Create() {
   };
 
   return (
-    <div className="flex justify-center items-center p-7">
+    <div className="flex justify-center items-center">
       <div className="w-full max-w-4xl">
         <h1 className="text-3xl text-primaryColor font-bold mb-2 tracking-wider">
           Input Users
         </h1>
         <div className="h-2 w-24 rounded-full bg-primaryColor mb-4"></div>
         <p className="text-sm text-slate-500 max-w-lg mb-4 leading-normal tracking-wider">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt,
-          nisi. Eligendi quas et iure ipsam cumque sunt.
+          Please complete all required information correctly so that the data can be stored and used according to its function.
         </p>
         <form onSubmit={handleCreate}>
           <div className="max-w-full p-4 bg-white rounded-md shadow-[0_3px_10px_rgb(0,0,0,0.2)]">

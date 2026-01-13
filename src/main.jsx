@@ -7,23 +7,30 @@ import Create from './components/Create.jsx';
 import Update from './components/Update.jsx';
 import Detail from './components/Detail.jsx';
 import { NotFoundPage } from './components/NotFoundPage.jsx';
+import { Layout } from './layout/Layout.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/create",
-    element: <Create></Create>,
-  },
-  {
-    path: "/update/:id",
-    element: <Update />,
-  },
-  {
-    path: "/detail/:id",
-    element: <Detail />,
+    element: <Layout />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "/create",
+        element: <Create />,
+      },
+      {
+        path: "/update/:id",
+        element: <Update />,
+      },
+      {
+        path: "/detail/:id",
+        element: <Detail />,
+      },
+    ]
   },
   {
     path:"*",
