@@ -1,12 +1,126 @@
-# React + Vite
+# Users Management System (React + JSON Server)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Users Management System is a simple web application based on **React** that is used to manage user data (CRUD: Create, Read, Update, Delete). This application utilizes **json-server** as a REST API backend and **Axios** for data communication.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Key Features
 
-## Expanding the ESLint configuration
+- Display a list of all users
+- Search for users by:
+  - Email
+  - Name
+  - Phone number
+- Add new user data
+- View user data details
+- Update user data
+- Delete user data
+- Modal display for Create, Update, and Details
+- **404 Not Found** page for unavailable routes
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Technologies Used
+
+- **React (Vite)**
+- **React Router DOM**
+- **Axios**
+- **JSON Server**
+- **Tailwind CSS**
+
+---
+
+## 📂 Project Structure
+
+```
+USERS-MANAGEMENT-SYSTEM/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── Create.jsx
+│   │   ├── Detail.jsx
+│   │   ├── Home.jsx
+│   │   ├── NotFoundPage.jsx
+│   │   └── Update.jsx
+│   ├── index.css     
+│   └── main.jsx
+├── index.html
+├── package.json
+├── README.md
+└── vite.config.js
+```
+
+---
+
+## 📦 Sample Data (db.json)
+
+```json
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Budi Update",
+      "username": "budisant",
+      "email": "budi.santoso@example.com",
+      "phone": "081234567890",
+      "website": "budisantoso.id"
+    },
+    {
+      "id": "2",
+      "name": "Siti Aminah",
+      "username": "sitiaminah",
+      "email": "siti.aminah@example.com",
+      "phone": "081298765432",
+      "website": "sitiaminah.com"
+    }
+  ]
+}
+```
+
+---
+
+## 🚀 Installing and Running the Application
+
+1. **Clone Repository**
+   ```bash
+   git clone https://github.com/MFadhliAlHafizh/react-users-management-system
+   cd react-users-management-system
+
+2. **Install Dependency Proyek**
+   Ensure you have pnpm installed.
+   ```bash
+   pnpm install
+
+3. **Run JSON Server**
+   ```bash
+   pnpm run server
+   ```
+
+    Ensure the server is running at:
+   ```bash
+   http://localhost:5000/users
+
+4. **Run in Development Mode**
+   ```bash
+   pnpm run dev
+   ```
+
+    Access the application at:
+   ```bash
+   http://localhost:5173
+
+5. **Build for Production**
+   ```bash
+   pnpm run build
+
+6. **Preview Build**
+   ```bash
+   pnpm run preview
+
+---
+
+## 📸 Preview Interface
+
+> ![Application Display](public/web-preview.png)
+
+---

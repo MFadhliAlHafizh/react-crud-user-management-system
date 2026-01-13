@@ -47,9 +47,9 @@ function Home() {
   );
 
   return (
-    <div className="flex justify-center items-center p-4 sm:p-7 relative bg-gray-50">
+    <div className="flex justify-center items-center px-4 pb-4 sm:px-7 sm:pb-4 relative bg-gray-50">
       {action && (
-        <div className="absolute w-full h-full flex justify-center pt-8 bg-[#00000080]">
+        <div className="absolute w-full h-full flex justify-center pt-6 bg-[#00000080] z-50">
           <div className="bg-white w-4xl rounded-md h-fit relative">
             <button
               onClick={() => setAction(null)}
@@ -79,7 +79,10 @@ function Home() {
           </div>
         </div>
       )}
-      <div className="w-full max-w-4xl">
+      <div className="w-full max-w-4xl shadow-[0px_3px_6px_3px_rgba(0,_0,_0,_0.1)] p-4">
+        <div className="bg-linear-to-br from-[#005F5A] to-[#0F3443] p-6 mb-6 rounded-md shadow-[0px_3px_6px_3px_rgba(0,_0,_0,_0.1)]">
+          <h1 className="text-2xl text-white font-bold tracking-wider text-center">Users Management System</h1>
+        </div>
         <h1 className="text-3xl text-primaryColor font-bold mb-2 tracking-wider">
           Users Data
         </h1>
